@@ -1,20 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Pet from './Pet.jsx';
 
 function Client({ data, callback }) {
 
+    const [dataState, setDataState] = useState(data);
 
+	useEffect(() => {
+		setDataState(data);
+	}, [data])
 
 	return (
 		<div className="namesList">
 
 
 			<p>
-				{data.name}
+				{dataState.name}
 			</p>
 
 			{
-				data.pets.map((pet, y) =>
+				dataState.pets.map((pet, y) =>
 					<Pet key={y} pet={pet}/>
 				)
 			}

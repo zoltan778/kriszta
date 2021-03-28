@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 export default function Pet({pet}) {
 
     const [isLoading, setIsLoading] = useState(false);
     const [petState, setPetState] = useState(pet);
+
+    useEffect(() => {
+        setPetState(pet);
+    }, [pet]);
 
     function mindegy() {
         setIsLoading(true);
