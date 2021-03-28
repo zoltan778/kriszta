@@ -34,7 +34,6 @@ export default function Pet({pet}) {
                     (e) => mindegy()
                 }
             >
-                {/* //not working */}
                 {isLoading ? "..." : petState.isVaccinated ? "true" : "false"}
 
             </button>
