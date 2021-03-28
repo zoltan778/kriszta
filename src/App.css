@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+  padding-top: 16px;
+}
+
+.Client {
+  border: 1px solid black;
+  margin: 16px;
+  padding: 16px;
+}
+
+.Pet {
+  border: 1px solid blue;
+  margin: 16px;
+  padding: 16px;
+}
